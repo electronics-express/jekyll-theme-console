@@ -3,12 +3,12 @@
 /**
  * Style variables
  */
-$base-font-family:     'Source Code Pro', monospace !default;
-$base-font-size:       25px !default;
-$mobile-font-size:     18px !default;
-$base-line-height:     1.5 !default;
-$container-width:      90% !default;
-$container-max-width:  600px !default;
+$base-font-family:     'JetBrains Mono', monospace !default;
+$base-font-size:       15px !default;
+$mobile-font-size:     14px !default;
+$base-line-height:     1.6 !default;
+$container-width:      92% !default;
+$container-max-width:  960px !default;
 
 /**
  * Global
@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
+a[href^="http"]::after { content: "\00a0[ext]";  font-size: 0.75em;  opacity: 0.5;  text-decoration: none; }
 @media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } }
 
 /**
@@ -42,6 +43,50 @@ footer { margin-bottom: 20px; }
 :not(.menu) > ul { list-style: none;  padding-left: 0; }
 :not(.menu) > ul { list-style-type: none; }
 :not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
+
+/**
+ * Redacted text — use <mark>secret</mark> in markdown
+ */
+mark { background-color: var(--text-color);  color: transparent;  cursor: default;  transition: color 0.2s, background-color 0.2s; }
+mark:hover { background-color: transparent;  color: var(--text-color); }
+
+/**
+ * Home page quote
+ */
+.site-quote { opacity: 0.5;  margin-bottom: 30px; }
+.site-quote-attr { color: var(--link-color);  opacity: 1; }
+
+/**
+ * gg back-to-top button
+ */
+.gg-btn { position: fixed;  bottom: 18px;  right: 20px;  background: none;  border: none;  color: var(--link-color);  font-family: $base-font-family;  font-size: $base-font-size;  cursor: pointer;  opacity: 0.35;  padding: 0; }
+.gg-btn:hover { opacity: 1; }
+
+/**
+ * tree site map
+ */
+.tree-output span { display: block;  line-height: 1.7; }
+
+/**
+ * history log
+ */
+.history-log { opacity: 0.55;  margin-top: 30px;  line-height: 1.7; }
+.history-log:hover { opacity: 1;  transition: opacity 0.3s; }
+
+/**
+ * ls -la post list
+ */
+ul.post-list > li:before { content: ""; margin-right: 0; }
+.ls-perms { display: inline-block; min-width: 12ch; opacity: 0.35; }
+.ls-date { display: inline-block; min-width: 13ch; color: var(--code-color-9); }
+
+/**
+ * Vim statusline
+ */
+.vim-statusline { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; font-size: 0.85em; }
+.vim-mode { background-color: var(--link-color); color: var(--background-color); font-weight: bold; padding: 0 5px; }
+.vim-path { color: var(--text-color); opacity: 0.6; }
+.vim-right { color: var(--text-color); opacity: 0.4; }
 
 /**
  * Header/Navigation

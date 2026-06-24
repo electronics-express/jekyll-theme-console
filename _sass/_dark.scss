@@ -5,13 +5,13 @@
 @mixin theme() {
   :root {
     --base-color: #DBDBDB;
-    --border: dashed 1px rgba(219, 219, 219, 0.9);
-    --selection-background: rgba(219, 219, 219, 0.99);
-    --selection-text: #000;
-    --background-color: #000;
+    --border: dashed 1px rgba(219, 219, 219, 0.4);
+    --selection-background: rgba(125, 211, 252, 0.3);
+    --selection-text: #fff;
+    --background-color: #0d0d0d;
     --text-color: var(--base-color);
     --placeholder-color: var(--base-color);
-    --link-color: var(--base-color);
+    --link-color: #7dd3fc;
     --code-color-1: #aaaaaa;
     --code-color-2: #ffffcc;
     --code-color-3: #F00000;
