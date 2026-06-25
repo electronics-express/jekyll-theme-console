@@ -3,16 +3,23 @@ layout: default
 ---
 
 {{ content }}
-{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
-
-<p class="site-quote">"The competent programmer is fully aware of the strictly limited size of his own skull."<span class="site-quote-attr"> — Dijkstra</span></p>
+{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %}
 
 {%- if site.posts.size > 0 -%}
+  <h2>Posts</h2>
   <ul class="post-list">
     {%- for post in site.posts -%}
     <li>
       {%- assign date_format = "%Y-%m-%d" -%}
-      <span class="ls-perms">-rw-r--r--</span><span class="ls-date">{{ post.date | date: date_format }}</span><a href="{{ post.url | relative_url }}">{{ post.path | split: '/' | last | replace: '.md', '.html' }}</a>
+      <div class="post-meta"><a class="post-date" href="{{ post.url | relative_url }}">{{ post.date | date: date_format }}</a></div>
+      {%- if post.link -%}
+      <a class="post-title link-post" href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }} →</a>
+      {%- else -%}
+      <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      {%- endif -%}
+      {%- if post.excerpt -%}
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>

@@ -5,22 +5,24 @@
 @mixin theme() {
   :root {
     --base-color: #c8c8c8;
-    --border: dashed 1px rgba(200, 200, 200, 0.2);
-    --selection-background: rgba(107, 159, 212, 0.25);
+    --border: solid 1px rgba(200, 200, 200, 0.2);
+    --selection-background: rgba(232, 160, 32, 0.25);
     --selection-text: #fff;
     --background-color: #111111;
     --text-color: var(--base-color);
     --placeholder-color: var(--base-color);
-    --link-color: #6b9fd4;
+    --link-color: #e8a020;
+    --external-link-color: #6eb5c0;
+    --code-bubble-background: rgba(255, 255, 255, 0.08);
     --code-color-1: #6b7280;
     --code-color-2: #252510;
     --code-color-3: #cc4444;
     --code-color-4: #6b3030;
     --code-color-5: #a78bca;
-    --code-color-6: #5a8a3a;
+    --code-color-6: #4ea854;
     --code-color-7: #b8b069;
     --code-color-8: #44446a;
-    --code-color-9: #4e9a6a;
+    --code-color-9: #4ea854;
     --code-color-10: #6b7280;
     --code-color-11: #555555;
     --code-color-12: #7a6080;

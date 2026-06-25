@@ -1,13 +1,25 @@
 # Example Site settings
+title: electronics.express
+tagline: open-source projects and internet rabbit holes.
+logo: /assets/nasa_control_room_ee.png
+footer: '© 2026 electronics.express'
 
-#header_pages:
-#  - index.md
-#  - about.md
+header_pages:
+  - index.md
+  - links.md
+  - about.md
 
 #footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
 
 plugins:
   - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 # Theme options
 # style: dark # dark (default) or light or hacker

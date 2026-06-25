@@ -1,16 +1,3 @@
-<div class="vim-statusline">
-  <div class="vim-left">
-    <span class="vim-mode">-- NORMAL --</span><span class="vim-path"> ~/{{ page.path }}</span>
-  </div>
-  <div class="vim-right">{{ page.content | number_of_words | divided_by: 200 | at_least: 1 }} min read | utf-8 | html</div>
-</div>
 <footer>
   {{ site.footer }}
-  <pre class="ascii-computer">
- .-----.
- | >_  |
- |_____|
-  |||||
-  </pre>
 </footer>
-<button class="gg-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">[gg]</button>
