@@ -2,7 +2,7 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
   <div class="site-title">
-    <a href="{{ "/" | relative_url }}" class="site-logo-link">
+    <a href="{{ "/home/" | relative_url }}" class="site-logo-link">
       {%- if site.logo -%}
       <span class="site-logo-frame"><img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" class="site-logo"></span>
       {%- else -%}
