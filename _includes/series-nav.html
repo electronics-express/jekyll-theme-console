@@ -1,0 +1,18 @@
+{%- if page.series -%}
+{%- assign series_posts = site.posts | where: "series", page.series | sort: "part" -%}
+{%- if series_posts.size > 1 -%}
+<div class="series-nav">
+  <span class="series-label">{{ page.series }}</span>
+  <span class="series-parts">
+    {%- for sp in series_posts -%}
+      {%- if sp.url == page.url -%}
+        <span class="series-part series-part--current">{{ sp.part }}</span>
+      {%- else -%}
+        <a class="series-part" href="{{ sp.url | relative_url }}">{{ sp.part }}</a>
+      {%- endif -%}
+      {%- unless forloop.last -%}<span class="series-sep"> · </span>{%- endunless -%}
+    {%- endfor -%}
+  </span>
+</div>
+{%- endif -%}
+{%- endif -%}

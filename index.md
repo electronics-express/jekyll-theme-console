@@ -4,6 +4,4 @@ layout: home
 permalink: /
 ---
 
-# Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+**electronics.express** is an independent site about open-source hardware, RF, networking, and the corners of the internet worth knowing about. Written by one person, published when ready.

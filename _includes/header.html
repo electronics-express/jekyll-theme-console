@@ -2,14 +2,14 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
   <div class="site-title">
-    <a href="{{ "/home/" | relative_url }}" class="site-logo-link">
+    <a href="{{ "/" | relative_url }}" class="site-logo-link">
       {%- if site.logo -%}
       <span class="site-logo-frame"><img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" class="site-logo"></span>
       {%- else -%}
       {{ site.title }}
       {%- endif -%}
     </a>
-    {%- if site.tagline -%}<div class="site-tagline">{{ site.tagline }}</div>{%- endif -%}
+    {%- if site.tagline -%}<div class="site-tagline"><span class="live-dot"></span>{{ site.tagline }}</div>{%- endif -%}
   </div>
 
   <div class="menu">

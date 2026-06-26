@@ -4,15 +4,16 @@
 
 @mixin theme() {
   :root {
-    --base-color: #c8c8c8;
-    --border: solid 1px rgba(200, 200, 200, 0.2);
-    --selection-background: rgba(232, 160, 32, 0.25);
+    --base-color: #bfbdb4;
+    --border: solid 1px rgba(90, 136, 112, 0.25);
+    --selection-background: rgba(90, 136, 112, 0.25);
     --selection-text: #fff;
-    --background-color: #111111;
+    --background-color: #160f08;
     --text-color: var(--base-color);
     --placeholder-color: var(--base-color);
     --link-color: #e8a020;
-    --external-link-color: #6eb5c0;
+    --external-link-color: #5a8870;
+    --accent-2: #5a8870;
     --code-bubble-background: rgba(255, 255, 255, 0.08);
     --code-color-1: #6b7280;
     --code-color-2: #252510;
